@@ -1,0 +1,69 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Env / local config
+.env
+.env.*
+*.local
+
+# Secrets and private material
+secrets/
+*.pem
+*.key
+*.crt
+*.p12
+*.kubeconfig
+*.age
+*.sops.yaml
+*.dec
+*.secret
+*.secrets.yaml
+
+# Terraform / infra leftovers
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Helm / Kubernetes generated files
+*.tgz
+charts/
+tmp/
+rendered/
+manifests-rendered/
+.kube/
+
+# Rust
+target/
+Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Testing / temp
+coverage/
+dist/
+build/
+.cache/
