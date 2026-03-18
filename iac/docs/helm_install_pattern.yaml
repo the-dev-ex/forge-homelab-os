@@ -1,0 +1,53 @@
+# iac/middleware/_patterns/helm_install_pattern.yaml
+helm_install_pattern:
+  1_define:
+    - namespace
+    - hostname
+    - storage
+    - secrets
+    - app_role
+
+  2_discover_chart:
+    - helm_repo_add
+    - helm_repo_update
+    - helm_search_repo
+    - helm_show_chart
+    - helm_show_values
+
+  3_create_values_contract:
+    - save_defaults_if_needed
+    - create_minimal_override_values_file
+
+  4_render_first:
+    - helm_template
+    - inspect_rendered_manifests
+    - save_under_rendered
+
+  5_customize:
+    - add_extra_manifests
+    - add_patches
+    - add_secrets
+    - add_ingress
+
+  6_apply_for_real:
+    - helm_upgrade_install
+
+  7_validate_cluster_state:
+    - pods
+    - services
+    - endpoints
+    - ingress
+
+  8_debug_if_needed:
+    - logs
+    - describe
+
+  9_test_real_behavior:
+    - dns
+    - browser
+    - actual_app_workflow
+
+  10_commit_to_structure:
+    - keep_values
+    - keep_manifests
+    - keep_rendered_output_if_helpful

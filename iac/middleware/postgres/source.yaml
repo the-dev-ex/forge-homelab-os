@@ -1,0 +1,8 @@
+release:
+  name: postgres
+  namespace: middleware
+
+chart:
+  name: postgresql
+  repo: oci://registry-1.docker.io/bitnamicharts
+  version: 18.5.6

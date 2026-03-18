@@ -1,0 +1,29 @@
+global:
+  defaultStorageClass: local-path
+  security:
+    allowInsecureImages: true
+  defaultFips: "off"
+
+auth:
+  username: immich
+  database: immich
+  existingSecret: postgres-auth
+
+primary:
+  persistence:
+    enabled: true
+    storageClass: local-path
+    size: 20Gi
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 512Mi
+    limits:
+      memory: 1Gi
+
+  extendedConfiguration: |
+    shared_buffers = 128MB
+    work_mem = 4MB
+    maintenance_work_mem = 64MB
+    effective_cache_size = 512MB
