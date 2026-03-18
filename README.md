@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/header.png" alt="Forge Homelab OS banner" width="100%">
+</p>
+
 # forge-homelab-os
 
 **Forge Homelab OS** is an open-source, contract-driven platform for building a clean, portable, Kubernetes-native operating model for the homelab.
@@ -268,3 +272,7 @@ It becomes an operating model for self-hosted systems.
 **Leo Rocha**
 
 Creator of Forge and builder of contract-driven homelab infrastructure.
+
+<p align="center">
+  <img src="assets/footer.png" alt="Forge Homelab OS footer banner" width="100%">
+</p>
